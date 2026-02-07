@@ -7,6 +7,7 @@ const PORT = process.env.PORT || 3000;
 // Middleware
 app.use(cors());
 app.use(express.json());
+app.use(express.static('public'));
 
 // Route de santé
 app.get('/', (req, res) => {
@@ -23,6 +24,11 @@ app.get('/', (req, res) => {
 
 app.get('/health', (req, res) => {
   res.json({ status: 'ok', timestamp: new Date().toISOString() });
+});
+
+// Page de simulation
+app.get('/simulation', (req, res) => {
+  res.sendFile(`${__dirname}/public/simulation.html`);
 });
 
 // Route pour obtenir les infos de la vidéo

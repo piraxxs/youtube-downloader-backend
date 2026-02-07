@@ -1,0 +1,107 @@
+:root {
+  color-scheme: dark;
+  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #050505;
+  color: #f5f5f5;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(280px, 360px) 1fr;
+  gap: 32px;
+  padding: 32px;
+  min-height: 100vh;
+}
+
+.panel {
+  background: #101010;
+  border-radius: 16px;
+  padding: 24px;
+  border: 1px solid #222;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+}
+
+.panel h1 {
+  margin-top: 0;
+  font-size: 24px;
+}
+
+.subtitle {
+  margin-top: 8px;
+  color: #c8c8c8;
+  font-size: 14px;
+}
+
+.controls {
+  margin-top: 24px;
+  display: grid;
+  gap: 16px;
+}
+
+.field {
+  display: grid;
+  gap: 6px;
+  font-size: 14px;
+}
+
+.field input {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #2d2d2d;
+  background: #0a0a0a;
+  color: #f5f5f5;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.buttons button {
+  flex: 1 1 30%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: none;
+  background: #ffffff;
+  color: #0a0a0a;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.buttons button#stop {
+  background: #3b3b3b;
+  color: #f5f5f5;
+}
+
+.buttons button#reset {
+  background: #1d1d1d;
+  color: #f5f5f5;
+  border: 1px solid #2d2d2d;
+}
+
+.stage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+canvas {
+  background: #0c0c0c;
+  border-radius: 24px;
+  border: 2px solid #1b1b1b;
+}
+
+@media (max-width: 960px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}

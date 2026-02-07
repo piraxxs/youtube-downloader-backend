@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simulation balle dans un cercle</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="layout">
+      <section class="panel">
+        <h1>Simulation balle dans un cercle</h1>
+        <p class="subtitle">
+          Paramétrez la scène puis lancez la simulation. Les mouvements restent dynamiques avec une
+          vitesse minimale assurée.
+        </p>
+        <form id="controls" class="controls">
+          <div class="field">
+            <label for="ballCount">Nombre de balles</label>
+            <input id="ballCount" type="number" min="1" max="50" value="1" />
+          </div>
+          <div class="field">
+            <label for="spawnInterval">Apparition des balles (s)</label>
+            <input id="spawnInterval" type="number" min="0" step="0.1" value="0" />
+          </div>
+          <div class="field">
+            <label for="circleCount">Nombre de cercles</label>
+            <input id="circleCount" type="number" min="1" max="5" value="1" />
+          </div>
+          <div class="field">
+            <label for="shrinkRate">Réduction des cercles (px/s)</label>
+            <input id="shrinkRate" type="number" min="0" step="1" value="0" />
+          </div>
+          <div class="field">
+            <label for="holeSize">Taille du trou (°)</label>
+            <input id="holeSize" type="number" min="0" max="180" value="0" />
+          </div>
+          <div class="field">
+            <label for="baseSpeed">Vélocité de départ</label>
+            <input id="baseSpeed" type="number" min="10" max="600" value="220" />
+          </div>
+          <div class="field">
+            <label for="gravity">Gravité (px/s²)</label>
+            <input id="gravity" type="number" min="-500" max="2000" value="480" />
+          </div>
+          <div class="field">
+            <label for="minSpeed">Vitesse minimale</label>
+            <input id="minSpeed" type="number" min="10" max="800" value="180" />
+          </div>
+          <div class="buttons">
+            <button type="button" id="start">Lancer</button>
+            <button type="button" id="stop">Pause</button>
+            <button type="button" id="reset">Réinitialiser</button>
+          </div>
+        </form>
+      </section>
+      <section class="stage">
+        <canvas id="scene" width="720" height="720"></canvas>
+      </section>
+    </main>
+    <script src="/simulation.js"></script>
+  </body>
+</html>
