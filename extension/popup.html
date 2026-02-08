@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>YouTube Downloader</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header>
+        <h1>YouTube Downloader</h1>
+        <p>Collez une URL YouTube et choisissez le format.</p>
+      </header>
+
+      <section class="form">
+        <label class="field">
+          <span>URL YouTube</span>
+          <input id="video-url" type="url" placeholder="https://www.youtube.com/watch?v=..." />
+        </label>
+
+        <label class="field">
+          <span>Format</span>
+          <select id="format">
+            <option value="mp3">MP3 (audio)</option>
+            <option value="mp4">MP4 (vidéo)</option>
+          </select>
+        </label>
+
+        <label class="field" id="quality-field">
+          <span>Qualité MP4</span>
+          <select id="quality">
+            <option value="360">360p</option>
+            <option value="720">720p</option>
+            <option value="1080">1080p</option>
+          </select>
+        </label>
+
+        <label class="field">
+          <span>API backend</span>
+          <input id="api-base" type="url" placeholder="http://localhost:3000" />
+        </label>
+
+        <div class="actions">
+          <button id="fetch-info" type="button">Voir les infos</button>
+          <button id="download" type="button" class="primary">Télécharger</button>
+        </div>
+      </section>
+
+      <section class="info" id="info">
+        <div class="placeholder">Aucune information chargée.</div>
+      </section>
+
+      <footer>
+        <small>Assurez-vous que l'API Node tourne avant de télécharger.</small>
+      </footer>
+    </main>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

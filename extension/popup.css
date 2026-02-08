@@ -1,0 +1,117 @@
+:root {
+  color-scheme: light;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-size: 14px;
+  --bg: #f7f7fb;
+  --card: #ffffff;
+  --text: #1e1e2f;
+  --muted: #6b6b7f;
+  --accent: #ff0033;
+  --border: #e2e2ef;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  min-width: 320px;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+}
+
+header h1 {
+  font-size: 18px;
+  margin: 0 0 4px;
+}
+
+header p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: var(--card);
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.field input,
+.field select {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  font-size: 13px;
+  color: var(--text);
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+button {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: #fff;
+  cursor: pointer;
+}
+
+button.primary {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.info {
+  background: var(--card);
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  min-height: 90px;
+}
+
+.info h2 {
+  font-size: 14px;
+  margin: 0 0 6px;
+}
+
+.info p {
+  margin: 0 0 4px;
+  color: var(--muted);
+}
+
+.placeholder {
+  color: var(--muted);
+}
+
+footer small {
+  color: var(--muted);
+}
